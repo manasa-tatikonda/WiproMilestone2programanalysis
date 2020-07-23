@@ -1,0 +1,21 @@
+
+        String word=input1.toUpperCase();
+		String [] sarray=input2.split(":");
+		String output="";
+		int underscore=word.indexOf('_');
+		for(String s:sarray)
+		{
+			String s1=s.toUpperCase();
+			if(word.length()==s1.length())
+			{
+			        int compare=s1.compareTo(word.replace('_',s1.charAt(underscore)));
+			        if(compare==0)
+			        {
+                          output+=s1+":";
+			        }
+			}
+		}
+		if(output==""){return "ERROR-009";}
+		else{return output.substring(0,output.length()-1);}
+		
+https://tests.mettl.com/test-window/13486c16		

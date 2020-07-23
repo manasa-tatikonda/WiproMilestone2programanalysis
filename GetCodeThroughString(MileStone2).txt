@@ -1,0 +1,27 @@
+        String [] input=input1.split(" ");
+		int size=0;
+		for(int i=0;i<=input.length-1;i++)
+		{
+			size+=input[i].length();
+		}
+		int flag=0,sum=size;
+		while(true)
+		{
+			if(sum>0 && sum<=9)
+			{flag=1;break;}
+			else
+			{
+				int s=0;
+				while(sum!=0)
+				{
+					s+=sum%10;
+					sum/=10;
+				}
+				sum=s;
+			}
+		}
+		int PIN=0;
+		if(flag==1)
+		{PIN=sum;}
+		return PIN;
+https://tests.mettl.com/test-window/75c9faf0		

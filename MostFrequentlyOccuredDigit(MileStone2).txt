@@ -1,0 +1,20 @@
+        int [] frequency={0,0,0,0,0,0,0,0,0,0};
+		for(int i=0;i<=input1.length-1;i++)
+		{
+			int number=input1[i];
+			while(number!=0)
+			{
+				frequency[number%10]++;
+				number/=10;
+			}
+		}
+		ArrayList<Integer> a=new ArrayList<Integer>(frequency.length);
+		for(int j=0;j<=frequency.length-1;j++)
+		{
+			a.add(frequency[j]);
+		}
+		int maxele=Collections.max(a);
+		int index=a.lastIndexOf(maxele); 
+		return index;
+		
+https://tests.mettl.com/test-window/cbe4c4da		

@@ -1,0 +1,12 @@
+		String number=String.valueOf(input1);
+		int sum=0;
+		for(int i=0;i<=number.length()-1;i++)
+		{
+			for(int j=i;j<=number.length()-1;j++)
+			{
+				sum+=(int)number.charAt(j)-'0';
+			}
+		}
+		return sum;
+		
+https://tests.mettl.com/test-window/1ddbe65e

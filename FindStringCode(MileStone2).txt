@@ -1,0 +1,24 @@
+        String [] input=input1.split(" ");
+		String strcode="";
+		for(int i=0;i<=input.length-1;i++)
+		{
+            String word=input[i].toLowerCase();
+			int start=0,end=word.length()-1;
+			int diff=0;
+			while(end>start)
+			{
+				int cvalue1=(int)word.charAt(start)-96;
+				int cvalue2=(int)word.charAt(end)-96;
+				diff+=Math.abs(cvalue1-cvalue2);
+				start++;
+				end--;
+			}
+			if(word.length()%2==1) //the string which has odd length
+			{
+                  diff+=(int)word.charAt(start)-96;
+			}
+			strcode+=String.valueOf(diff); //convers int to string 
+		}
+		return Integer.parseInt(strcode);
+		
+https://tests.mettl.com/test-window/e4df74e5		

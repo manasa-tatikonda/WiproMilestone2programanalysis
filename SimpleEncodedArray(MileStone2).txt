@@ -1,0 +1,11 @@
+        int [] orginal_array=new int [input1.length];
+		orginal_array[input1.length-1]=input1[input1.length-1];
+		int sum=orginal_array[input1.length-1];
+		// because last element of orginal element equals to last element of encoded array
+		for(int i=input1.length-2;i>=0;i--)
+		{
+			orginal_array[i]=input1[i]-orginal_array[i+1];
+			sum+=orginal_array[i];
+		}
+		return new Result(orginal_array[0],sum); 
+https://tests.mettl.com/test-window/1557c062		

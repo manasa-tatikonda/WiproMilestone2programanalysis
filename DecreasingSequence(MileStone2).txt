@@ -1,0 +1,23 @@
+        int encounter=0,longest_seq=0,c=0;
+		boolean flag=false;
+		for(int i=0;i<=input1.length-2;i++)
+		{
+			if(input1[i]>input1[i+1])
+			{
+				c+=1;
+				flag=true;
+			}
+			if(input1[i]<=input1[i+1] || i==input2-2)
+			{
+				if(flag)
+				{
+					encounter+=1;
+					longest_seq=(c+1>longest_seq)?c+1:longest_seq;
+					flag=false;
+					c=0;
+				}
+			}
+		}
+		return new Result(encounter,longest_seq);
+		
+https://tests.mettl.com/test-window/8e68e9a4
